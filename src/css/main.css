@@ -1,0 +1,213 @@
+
+    /* ============================================
+   ESTILOS PRINCIPAIS - VERSÃO RESPONSIVA
+   Escola Secundária Augusto Gomes
+   ============================================ */
+
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px; /* Espaço para o rodapé */
+}
+
+/* ============================================
+   CABEÇALHO PRINCIPAL
+   ============================================ */
+.myClass {
+    margin: 20px auto;
+    width: 40%;
+    padding: 30px 20px;
+    background-color: #d3d3d3;
+    text-align: center;
+    border: 2px solid #0066cc;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.myClass:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.myClass h1 {
+    color: #1a1a1a;
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.myClass h2 {
+    color: #555;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* ============================================
+   CARTÕES DE INFORMAÇÃO
+   ============================================ */
+.myClass2 {
+    width: 30.6%;
+    text-align: center;
+    margin: 20px 0 0 1.5%;
+    padding: 25px 15px;
+    background-color: #f5f5f5;
+    border: 2px solid #0066cc;
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: top;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.myClass2:first-of-type {
+    margin-left: 1.5%;
+}
+
+.myClass2:hover {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
+    transform: translateY(-5px);
+}
+
+.myClass2 h3 {
+    color: #0066cc;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.myClass2 h4 {
+    color: #666;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* ============================================
+   IMAGENS
+   ============================================ */
+.imagem {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+.rodape {
+    background-color: #d3d3d3;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 3px solid #0066cc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.rodape p {
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVIDADE
+   ============================================ */
+
+/* Tablets e telas médias (até 768px) */
+@media screen and (max-width: 768px) {
+    .myClass {
+        width: 90%;
+        padding: 25px 15px;
+    }
+
+    .myClass h1 {
+        font-size: 1.8em;
+    }
+
+    .myClass h2 {
+        font-size: 1.3em;
+    }
+
+    .myClass2 {
+        width: 47%;
+        margin-left: 1.5%;
+    }
+
+    .myClass2:nth-of-type(odd) {
+        margin-left: 1.5%;
+    }
+}
+
+/* Smartphones (até 600px) */
+@media screen and (max-width: 600px) {
+    body {
+        padding-bottom: 120px;
+    }
+
+    .myClass {
+        width: 95%;
+        margin: 10px auto;
+        padding: 20px 10px;
+    }
+
+    .myClass h1 {
+        font-size: 1.5em;
+    }
+
+    .myClass h2 {
+        font-size: 1.2em;
+    }
+
+    .myClass2 {
+        width: 95%;
+        margin: 15px auto;
+        display: block;
+    }
+
+    .imagem {
+        width: 100%;
+    }
+
+    .rodape {
+        padding: 20px 10px;
+    }
+
+    .rodape p {
+        font-size: 0.9em;
+    }
+}
+
+/* Telas muito pequenas (até 480px) */
+@media screen and (max-width: 480px) {
+    .myClass h1 {
+        font-size: 1.3em;
+    }
+
+    .myClass h2 {
+        font-size: 1.1em;
+    }
+
+    .myClass2 h3 {
+        font-size: 1.2em;
+    }
+
+    .myClass2 h4 {
+        font-size: 0.95em;
+    }
+}

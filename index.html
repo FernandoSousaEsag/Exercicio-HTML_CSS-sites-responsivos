@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de exercícios HTML/CSS - Escola Secundária Augusto Gomes" />
+    <title>Exercício 1 - Centralizar uma Div</title>
+  </head>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 80px; /* Espaço para o rodapé */
+    }
+
+    /* Cabeçalho principal */
+    .cabecalho-principal {
+      margin: 20px auto;
+      width: 40%;
+      padding: 20px;
+      background-color: #d3d3d3;
+      text-align: center;
+      border: 2px solid #0066cc;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .cabecalho-principal h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    .cabecalho-principal h2 {
+      color: #555;
+      font-size: 1.5em;
+    }
+
+    /* Container para os cartões */
+    .container-cartoes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    /* Cartões de informação */
+    .cartao-info {
+      width: calc(25% - 20px);
+      min-width: 200px;
+      text-align: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border: 2px solid #0066cc;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cartao-info:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .cartao-info h3 {
+      color: #0066cc;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .cartao-info p {
+      color: #666;
+    }
+
+    /* Container da imagem */
+    .container-imagem {
+      margin: 40px auto;
+      width: 40%;
+      padding: 20px;
+      background-color: #d3d3d3;
+      text-align: center;
+      border: 2px solid #0066cc;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagem {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+    }
+
+    /* Rodapé */
+    .rodape {
+      background-color: #d3d3d3;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 2px solid #0066cc;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .rodape p {
+      margin: 0;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* Responsividade */
+    @media screen and (max-width: 768px) {
+      .cabecalho-principal,
+      .container-imagem {
+        width: 90%;
+      }
+
+      .cartao-info {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .cabecalho-principal h1 {
+        font-size: 1.5em;
+      }
+
+      .cabecalho-principal h2 {
+        font-size: 1.2em;
+      }
+
+      .cartao-info {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <!-- Cabeçalho principal -->
+    <header class="cabecalho-principal">
+      <h1>Escola Secundária Augusto Gomes</h1>
+      <h2>Olá Mundo</h2>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <!-- Cartões de informação -->
+      <section class="container-cartoes">
+        <article class="cartao-info">
+          <h3>Matosinhos</h3>
+          <p>Localização da escola</p>
+        </article>
+        <article class="cartao-info">
+          <h3>2022/2023</h3>
+          <p>Ano letivo</p>
+        </article>
+        <article class="cartao-info">
+          <h3>Multimédia 11M</h3>
+          <p>Turma e curso</p>
+        </article>
+      </section>
+
+      <!-- Imagem destacada -->
+      <section class="container-imagem">
+        <img src="src/imagens/matosinhos.jpg" alt="Vista panorâmica de Matosinhos" class="imagem" />
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <p>&copy; 2023 Fernando Sousa nº 1 - Escola Secundária Augusto Gomes</p>
+    </footer>
+  </body>
+</html>
