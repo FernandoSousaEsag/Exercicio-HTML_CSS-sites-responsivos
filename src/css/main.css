@@ -1,10 +1,22 @@
 
-    /* ============================================
+
+/* ============================================
    ESTILOS PRINCIPAIS - VERSÃO RESPONSIVA
    Escola Secundária Augusto Gomes
    ============================================ */
 
 /* Reset básico e configurações globais */
+:root {
+    --cor-primaria: #0066cc;
+    --cor-secundaria: #d3d3d3;
+    --cor-fundo-claro: #f5f5f5;
+    --cor-texto-escuro: #333;
+    --cor-texto-medio: #555;
+    --cor-texto-cinza: #666;
+    --cor-preta: #1a1a1a;
+    --cor-branca: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,9 +39,9 @@ body {
     margin: 20px auto;
     width: 40%;
     padding: 30px 20px;
-    background-color: #d3d3d3;
+    background-color: var(--cor-secundaria);
     text-align: center;
-    border: 2px solid #0066cc;
+    border: 2px solid var(--cor-primaria);
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -41,14 +53,14 @@ body {
 }
 
 .myClass h1 {
-    color: #1a1a1a;
+    color: var(--cor-preta);
     font-size: 2em;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .myClass h2 {
-    color: #555;
+    color: var(--cor-texto-medio);
     font-size: 1.5em;
     font-weight: 400;
 }
@@ -61,8 +73,8 @@ body {
     text-align: center;
     margin: 20px 0 0 1.5%;
     padding: 25px 15px;
-    background-color: #f5f5f5;
-    border: 2px solid #0066cc;
+    background-color: var(--cor-fundo-claro);
+    border: 2px solid var(--cor-primaria);
     border-radius: 8px;
     display: inline-block;
     vertical-align: top;
@@ -75,20 +87,20 @@ body {
 }
 
 .myClass2:hover {
-    background-color: #fff;
+    background-color: var(--cor-branca);
     box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
     transform: translateY(-5px);
 }
 
 .myClass2 h3 {
-    color: #0066cc;
+    color: var(--cor-primaria);
     font-size: 1.4em;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
 .myClass2 h4 {
-    color: #666;
+    color: var(--cor-texto-cinza);
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
@@ -108,11 +120,11 @@ body {
    RODAPÉ
    ============================================ */
 .rodape {
-    background-color: #d3d3d3;
+    background-color: var(--cor-secundaria);
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    border-top: 3px solid #0066cc;
+    border-top: 3px solid var(--cor-primaria);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -120,7 +132,7 @@ body {
 
 .rodape p {
     margin: 0;
-    color: #333;
+    color: var(--cor-texto-escuro);
     font-weight: 500;
     font-size: 1em;
 }
